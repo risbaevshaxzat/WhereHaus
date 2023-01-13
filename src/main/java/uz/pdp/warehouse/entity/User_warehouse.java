@@ -8,22 +8,18 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@Entity
-public class Input_product{
+@Entity(name = "user_warehouse")
+
+public class User_warehouse {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    private Integer product_id;
-
-    private String amount;
-
-    private String price;
-
-    private String expire_date;
+    @ManyToOne
+    private User user;
 
     @ManyToOne
-    private Input input;
+    private Wherhouse wherhouse;
 
 }

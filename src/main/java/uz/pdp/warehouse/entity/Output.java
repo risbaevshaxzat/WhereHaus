@@ -9,21 +9,23 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 @Entity
-public class Input_product{
-
+public class Output {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    private Integer product_id;
-
-    private String amount;
-
-    private String price;
-
-    private String expire_date;
+    private String date;
 
     @ManyToOne
-    private Input input;
+    private Wherhouse wherhouse;
 
+    @ManyToOne
+    private Currencyy currencyy;
+
+    private String facture_number;
+
+    private String code;
+
+    @ManyToOne
+    private Client client;
 }

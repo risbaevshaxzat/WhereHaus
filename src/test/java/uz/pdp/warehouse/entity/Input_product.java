@@ -23,6 +23,6 @@ public class Input_product {
 
     private String expire_date;
 
-    private Input input
+    private Input input_id;
 
 }

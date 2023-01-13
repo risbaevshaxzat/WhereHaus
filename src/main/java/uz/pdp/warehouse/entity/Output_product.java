@@ -9,21 +9,19 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 @Entity
-public class Input_product{
+public class Output_product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    private Integer product_id;
+    @ManyToOne
+    private Product product;
 
     private String amount;
 
     private String price;
 
-    private String expire_date;
-
     @ManyToOne
-    private Input input;
-
+    private Output output;
 }

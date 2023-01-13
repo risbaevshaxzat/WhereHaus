@@ -1,6 +1,9 @@
 package uz.pdp.warehouse.entity;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -9,21 +12,16 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 @Entity
-public class Input_product{
+
+public class Currencyy {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    private Integer product_id;
+    private String name;
 
-    private String amount;
+    private String active;
 
-    private String price;
-
-    private String expire_date;
-
-    @ManyToOne
-    private Input input;
 
 }

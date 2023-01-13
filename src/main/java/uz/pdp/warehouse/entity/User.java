@@ -11,15 +11,22 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-@Entity
-public class Category {
+@Entity(name = "users")
+public class User {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    private String name;
-    private Integer parent_category_id;
+
+    private String first_name;
+
+    private String last_name;
+
+    private String phone_number;
+
+    private String code;
+
+    private String password;
+
     private String active;
-
-
-
 }
